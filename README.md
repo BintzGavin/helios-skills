@@ -4,19 +4,27 @@ Agent skills for [Helios](https://github.com/helios-project/helios), a browser-n
 
 ## Installation
 
-Install all skills using the [skills CLI](https://skills.sh):
+### Via skills.sh
+
+Install using the [skills CLI](https://skills.sh):
 
 ```bash
-npx skills add gavinbintz/helios-skills
+npx skills add BintzGavin/helios-skills
 ```
 
 Or install individual skills by path:
 
 ```bash
-npx skills add gavinbintz/helios-skills/helios/core
-npx skills add gavinbintz/helios-skills/helios/renderer
-npx skills add gavinbintz/helios-skills/helios/player
-npx skills add gavinbintz/helios-skills/helios/studio
+npx skills add BintzGavin/helios-skills/helios/core
+npx skills add BintzGavin/helios-skills/helios/renderer
+npx skills add BintzGavin/helios-skills/helios/player
+npx skills add BintzGavin/helios-skills/helios/studio
+```
+
+### Via npm
+
+```bash
+npm install @helios-project/skills
 ```
 
 ## Available Skills
