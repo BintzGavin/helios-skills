@@ -1,6 +1,6 @@
 # Helios Skills
 
-Agent skills for [Helios](https://github.com/helios-project/helios), a browser-native video engine for programmatic animation and rendering.
+Agent skills for [Helios](https://github.com/BintzGavin/helios), a browser-native video engine for programmatic animation and rendering.
 
 ## Installation
 
