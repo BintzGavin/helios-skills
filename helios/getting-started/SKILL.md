@@ -47,28 +47,28 @@ The `@helios-project/core` package contains the engine logic, timing drivers, an
 npm install @helios-project/core
 ```
 
-### Player Package (Optional)
+### Renderer Package (Recommended)
 
-The `@helios-project/player` package provides the `<helios-player>` web component for embedding compositions with playback controls.
-
-```bash
-npm install @helios-project/player
-```
-
-### Renderer Package (Optional)
-
-The `@helios-project/renderer` package is a Node.js library for rendering compositions to video files (MP4, etc.) using Headless Chrome and FFmpeg.
+The `@helios-project/renderer` package is a Node.js library for rendering compositions to video files (MP4, etc.) using Headless Chrome and FFmpeg. **Most users want to create MP4 files**, so this is the recommended second package.
 
 ```bash
 npm install @helios-project/renderer
 ```
 
-### Quick Install (Core + Player)
+### Quick Install (Core + Renderer)
 
-For most use cases, install both core and player:
+For most use cases—creating MP4 videos—install both core and renderer:
 
 ```bash
-npm install @helios-project/core @helios-project/player
+npm install @helios-project/core @helios-project/renderer
+```
+
+### Player Package (Optional - For Preview/Development)
+
+The `@helios-project/player` package provides the `<helios-player>` web component for embedding compositions with playback controls. Useful for previewing compositions during development, but not required for rendering.
+
+```bash
+npm install @helios-project/player
 ```
 
 ## Basic Setup
@@ -154,16 +154,9 @@ Your existing CSS animations work without modification:
 
 When you call `helios.seek(45)`, all CSS/WAAPI animations instantly update to frame 45.
 
-### 4. Preview with the Player
+### 4. Render to Video
 
-Use the `<helios-player>` web component for preview:
-
-```html
-<helios-player src="./composition.html" width="1920" height="1080"></helios-player>
-<script type="module" src="@helios-project/player"></script>
-```
-
-### 5. Render to Video
+**This is the primary use case**—most users want to create MP4 files from their compositions.
 
 Use the CLI to render your composition:
 
@@ -183,6 +176,15 @@ await render({
   height: 1080,
   fps: 30
 });
+```
+
+### 5. Preview with the Player (Optional)
+
+If you installed the player package, use the `<helios-player>` web component for preview during development:
+
+```html
+<helios-player src="./composition.html" width="1920" height="1080"></helios-player>
+<script type="module" src="@helios-project/player"></script>
 ```
 
 ## Framework Integration
@@ -225,6 +227,8 @@ helios.subscribe(state => {
 When setting up a new Helios composition, ensure:
 
 - [ ] **Core package installed**: `npm install @helios-project/core`
+- [ ] **Renderer package installed** (for MP4 output): `npm install @helios-project/renderer`
+- [ ] **FFmpeg installed**: Verify with `ffmpeg -version`
 - [ ] **Helios instance created**: `new Helios({ duration, fps })`
 - [ ] **Timeline bound**: `helios.bindToDocumentTimeline()` called
 - [ ] **Window exposed**: `window.helios = helios` set
