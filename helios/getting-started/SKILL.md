@@ -13,27 +13,13 @@ Before installing Helios, ensure you have:
 
 - **Node.js**: v18 or higher (recommended)
 - **npm** or **yarn** package manager
-- **FFmpeg**: Required for the Renderer package (for video encoding)
-- **Chrome/Chromium**: Required for rendering (usually installed automatically by Playwright)
+- **Chrome/Chromium**: Required for rendering (automatically installed by Playwright)
 
-### Installing FFmpeg
+### FFmpeg (Automatically Included)
 
-**macOS:**
-```bash
-brew install ffmpeg
-```
+**Good news:** FFmpeg is automatically bundled with `@helios-project/renderer` via the `@ffmpeg-installer/ffmpeg` package. You don't need to install it manually!
 
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt-get update
-sudo apt-get install ffmpeg
-```
-
-**Windows:**
-Download from [ffmpeg.org](https://ffmpeg.org/download.html) or use Chocolatey:
-```bash
-choco install ffmpeg
-```
+The renderer package includes platform-specific FFmpeg binaries that work out of the box. If you prefer to use a system-installed FFmpeg instead, you can specify a custom path via the `ffmpegPath` option in the renderer configuration.
 
 ## Installation
 
@@ -228,7 +214,6 @@ When setting up a new Helios composition, ensure:
 
 - [ ] **Core package installed**: `npm install @helios-project/core`
 - [ ] **Renderer package installed** (for MP4 output): `npm install @helios-project/renderer`
-- [ ] **FFmpeg installed**: Verify with `ffmpeg -version`
 - [ ] **Helios instance created**: `new Helios({ duration, fps })`
 - [ ] **Timeline bound**: `helios.bindToDocumentTimeline()` called
 - [ ] **Window exposed**: `window.helios = helios` set
@@ -253,8 +238,9 @@ When setting up a new Helios composition, ensure:
 - Call `helios.bindToDocumentTimeline()` after creating the instance
 
 **Renderer fails**
-- Verify FFmpeg is installed: `ffmpeg -version`
+- FFmpeg is bundled with the renderer package, so no manual installation needed
 - Check that Chrome/Chromium is available (Playwright should install it automatically)
+- If you need to use a custom FFmpeg path, set `ffmpegPath` in renderer options
 
 **Player not detecting composition**
 - Ensure `window.helios = helios` is set
