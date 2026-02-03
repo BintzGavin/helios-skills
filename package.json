@@ -26,8 +26,7 @@
   "author": "Helios Project",
   "type": "module",
   "files": [
-    "helios/**/*",
-    "skill-creator/**/*",
+    "skills/**/*",
     "LICENSE",
     "README.md"
   ],

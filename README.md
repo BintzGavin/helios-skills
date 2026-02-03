@@ -16,13 +16,13 @@ Or install individual skills by path:
 
 ```bash
 # Start here for new projects
-npx skills add BintzGavin/helios-skills/helios/getting-started
+npx skills add BintzGavin/helios-skills/skills/getting-started
 
 # Core packages
-npx skills add BintzGavin/helios-skills/helios/core
-npx skills add BintzGavin/helios-skills/helios/renderer
-npx skills add BintzGavin/helios-skills/helios/player
-npx skills add BintzGavin/helios-skills/helios/studio
+npx skills add BintzGavin/helios-skills/skills/core
+npx skills add BintzGavin/helios-skills/skills/renderer
+npx skills add BintzGavin/helios-skills/skills/player
+npx skills add BintzGavin/helios-skills/skills/studio
 ```
 
 ### Via npm
@@ -35,56 +35,52 @@ npm install @helios-project/skills
 
 ### Getting Started
 
-- [**helios/getting-started**](./helios/getting-started) - Installation and quick start guide. Covers package installation, requirements (Node.js, FFmpeg), basic setup, and initial composition structure.
+- [**skills/getting-started**](./skills/getting-started) - Installation and quick start guide. Covers package installation, requirements (Node.js, FFmpeg), basic setup, and initial composition structure.
 
 ### Core
 
-- [**helios/core**](./helios/core) - Core API for Helios video engine. Covers Helios class instantiation, signals, animation helpers, and DOM synchronization.
+- [**skills/core**](./skills/core) - Core API for Helios video engine. Covers Helios class instantiation, signals, animation helpers, and DOM synchronization.
 
 ### Packages
 
-- [**helios/renderer**](./helios/renderer) - Server-side rendering of Helios compositions to video files.
-- [**helios/player**](./helios/player) - Embeddable video player with composition playback and controls.
-- [**helios/studio**](./helios/studio) - Visual editor for Helios compositions.
+- [**skills/renderer**](./skills/renderer) - Server-side rendering of Helios compositions to video files.
+- [**skills/player**](./skills/player) - Embeddable video player with composition playback and controls.
+- [**skills/studio**](./skills/studio) - Visual editor for Helios compositions.
 
 ### Workflows
 
-- [**helios/workflows/create-composition**](./helios/workflows/create-composition) - Workflow for creating a new Helios composition.
-- [**helios/workflows/render-video**](./helios/workflows/render-video) - Workflow for rendering compositions to video.
-- [**helios/workflows/visualize-data**](./helios/workflows/visualize-data) - Workflow for data visualization animations.
+- [**skills/workflows/create-composition**](./skills/workflows/create-composition) - Workflow for creating a new Helios composition.
+- [**skills/workflows/render-video**](./skills/workflows/render-video) - Workflow for rendering compositions to video.
+- [**skills/workflows/visualize-data**](./skills/workflows/visualize-data) - Workflow for data visualization animations.
 
 ### Framework Examples
 
-- [**helios/examples/react**](./helios/examples/react) - React integration patterns
-- [**helios/examples/vue**](./helios/examples/vue) - Vue integration patterns
-- [**helios/examples/svelte**](./helios/examples/svelte) - Svelte integration patterns
-- [**helios/examples/solid**](./helios/examples/solid) - Solid.js integration patterns
-- [**helios/examples/vanilla**](./helios/examples/vanilla) - Vanilla JavaScript patterns
+- [**skills/examples/react**](./skills/examples/react) - React integration patterns
+- [**skills/examples/vue**](./skills/examples/vue) - Vue integration patterns
+- [**skills/examples/svelte**](./skills/examples/svelte) - Svelte integration patterns
+- [**skills/examples/solid**](./skills/examples/solid) - Solid.js integration patterns
+- [**skills/examples/vanilla**](./skills/examples/vanilla) - Vanilla JavaScript patterns
 
 ### Animation Libraries
 
-- [**helios/examples/gsap**](./helios/examples/gsap) - GSAP animation integration
-- [**helios/examples/framer-motion**](./helios/examples/framer-motion) - Framer Motion integration
-- [**helios/examples/lottie**](./helios/examples/lottie) - Lottie animation playback
-- [**helios/examples/threejs**](./helios/examples/threejs) - Three.js 3D scenes
-- [**helios/examples/pixi**](./helios/examples/pixi) - PixiJS 2D graphics
-- [**helios/examples/p5**](./helios/examples/p5) - p5.js creative coding
+- [**skills/examples/gsap**](./skills/examples/gsap) - GSAP animation integration
+- [**skills/examples/framer-motion**](./skills/examples/framer-motion) - Framer Motion integration
+- [**skills/examples/lottie**](./skills/examples/lottie) - Lottie animation playback
+- [**skills/examples/threejs**](./skills/examples/threejs) - Three.js 3D scenes
+- [**skills/examples/pixi**](./skills/examples/pixi) - PixiJS 2D graphics
+- [**skills/examples/p5**](./skills/examples/p5) - p5.js creative coding
 
 ### Data Visualization
 
-- [**helios/examples/d3**](./helios/examples/d3) - D3.js visualizations
-- [**helios/examples/chartjs**](./helios/examples/chartjs) - Chart.js animated charts
+- [**skills/examples/d3**](./skills/examples/d3) - D3.js visualizations
+- [**skills/examples/chartjs**](./skills/examples/chartjs) - Chart.js animated charts
 
 ### Rendering Techniques
 
-- [**helios/examples/canvas**](./helios/examples/canvas) - Canvas 2D rendering
-- [**helios/examples/signals**](./helios/examples/signals) - Reactive signals patterns
-- [**helios/examples/tailwind**](./helios/examples/tailwind) - Tailwind CSS styling
-- [**helios/examples/podcast-visualizer**](./helios/examples/podcast-visualizer) - Audio visualization
-
-### Utilities
-
-- [**skill-creator**](./skill-creator) - Guide for creating new skills
+- [**skills/examples/canvas**](./skills/examples/canvas) - Canvas 2D rendering
+- [**skills/examples/signals**](./skills/examples/signals) - Reactive signals patterns
+- [**skills/examples/tailwind**](./skills/examples/tailwind) - Tailwind CSS styling
+- [**skills/examples/podcast-visualizer**](./skills/examples/podcast-visualizer) - Audio visualization
 
 ## License
 
