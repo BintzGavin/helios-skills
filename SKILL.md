@@ -12,6 +12,9 @@ This repository contains agent skills for [Helios](https://github.com/BintzGavin
 This is a **collection repository** containing multiple skills. To use these skills, install individual skills by their path:
 
 ```bash
+# Getting started
+npx skills add BintzGavin/helios-skills/helios/getting-started
+
 # Core skills
 npx skills add BintzGavin/helios-skills/helios/core
 npx skills add BintzGavin/helios-skills/helios/renderer
@@ -38,6 +41,10 @@ npx skills add BintzGavin/helios-skills/skill-creator
 ```
 
 ## Available Skills
+
+### Getting Started
+
+- **helios/getting-started** - Installation and quick start guide. Covers package installation, requirements (Node.js, FFmpeg), basic setup, and initial composition structure. Use when setting up a new Helios project.
 
 ### Core Package Skills
 

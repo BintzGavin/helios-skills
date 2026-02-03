@@ -15,6 +15,10 @@ npx skills add BintzGavin/helios-skills
 Or install individual skills by path:
 
 ```bash
+# Start here for new projects
+npx skills add BintzGavin/helios-skills/helios/getting-started
+
+# Core packages
 npx skills add BintzGavin/helios-skills/helios/core
 npx skills add BintzGavin/helios-skills/helios/renderer
 npx skills add BintzGavin/helios-skills/helios/player
@@ -28,6 +32,10 @@ npm install @helios-project/skills
 ```
 
 ## Available Skills
+
+### Getting Started
+
+- [**helios/getting-started**](./helios/getting-started) - Installation and quick start guide. Covers package installation, requirements (Node.js, FFmpeg), basic setup, and initial composition structure.
 
 ### Core
 
