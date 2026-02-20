@@ -53,6 +53,18 @@ npm install @helios-project/skills
 - [**skills/workflows/render-video**](./skills/workflows/render-video) - Workflow for rendering compositions to video.
 - [**skills/workflows/visualize-data**](./skills/workflows/visualize-data) - Workflow for data visualization animations.
 
+### Guided Video Creation
+
+End-to-end guided workflows for creating specific video types. Each skill extracts brand identity from your repo, generates beat-synced music, and produces a rendered video.
+
+- [**skills/guided/motion-design-rules**](./skills/guided/motion-design-rules) - Motion design framework: anti-slideshow architecture, visual layering, physics-based easing, choreography, and quality validation.
+- [**skills/guided/promo-video**](./skills/guided/promo-video) - Promotional / hype video. High energy, beat-synced, CTA-driven.
+- [**skills/guided/explainer-video**](./skills/guided/explainer-video) - Explainer / walkthrough video. Narrative arc, section headers, measured pacing.
+- [**skills/guided/product-demo**](./skills/guided/product-demo) - Product demo / showcase. Feature callouts, UI zoom-ins, progressive reveals.
+- [**skills/guided/testimonial-video**](./skills/guided/testimonial-video) - Social proof / testimonial video. Quote typography, customer branding, trust signals.
+- [**skills/guided/launch-announcement**](./skills/guided/launch-announcement) - Product launch / release announcement. Countdown motifs, dramatic reveal.
+- [**skills/guided/social-clip**](./skills/guided/social-clip) - Short-form social clip (Reels/TikTok/Shorts). Vertical 9:16, punchy, loop-friendly.
+
 ### Framework Examples
 
 - [**skills/examples/react**](./skills/examples/react) - React integration patterns
