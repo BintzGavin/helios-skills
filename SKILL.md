@@ -29,6 +29,15 @@ npx skills add BintzGavin/helios-skills/skills/workflows/visualize-data
 # Design / motion
 npx skills add BintzGavin/helios-skills/skills/design/animated-video-philosophy
 
+# Guided video creation
+npx skills add BintzGavin/helios-skills/skills/guided/motion-design-rules
+npx skills add BintzGavin/helios-skills/skills/guided/promo-video
+npx skills add BintzGavin/helios-skills/skills/guided/explainer-video
+npx skills add BintzGavin/helios-skills/skills/guided/product-demo
+npx skills add BintzGavin/helios-skills/skills/guided/testimonial-video
+npx skills add BintzGavin/helios-skills/skills/guided/launch-announcement
+npx skills add BintzGavin/helios-skills/skills/guided/social-clip
+
 # Framework examples
 npx skills add BintzGavin/helios-skills/skills/examples/react
 npx skills add BintzGavin/helios-skills/skills/examples/vue
@@ -62,6 +71,16 @@ npx skills add BintzGavin/helios-skills/skills/examples/threejs
 ### Design Skills
 
 - **skills/design/animated-video-philosophy** - Working philosophy for animated video: story-first motion, pacing, shots, timing, composition, medium-specific grammar, technical commitments, and anti-patterns. Use when directing or critiquing motion and programmatic video.
+
+### Guided Video Creation Skills
+
+- **skills/guided/motion-design-rules** - Motion design framework: anti-slideshow architecture, visual layering, physics-based easing, choreography, and quality validation. Referenced by all guided video skills.
+- **skills/guided/promo-video** - End-to-end promotional / hype video. High energy, beat-synced, CTA-driven.
+- **skills/guided/explainer-video** - Explainer / walkthrough video. Narrative arc, section headers, measured pacing.
+- **skills/guided/product-demo** - Product demo / showcase. Feature callouts, UI zoom-ins, progressive reveals.
+- **skills/guided/testimonial-video** - Social proof / testimonial video. Quote typography, customer branding, trust signals.
+- **skills/guided/launch-announcement** - Product launch / release announcement. Countdown motifs, dramatic reveal.
+- **skills/guided/social-clip** - Short-form social clip (Reels/TikTok/Shorts). Vertical 9:16, punchy, loop-friendly.
 
 ### Framework Integration Skills
 
