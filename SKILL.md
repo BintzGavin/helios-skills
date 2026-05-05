@@ -28,7 +28,7 @@ npx skills add BintzGavin/helios-skills/skills/workflows/visualize-data
 
 # Design / motion
 npx skills add BintzGavin/helios-skills/skills/design/animated-video-philosophy
-npx skills add BintzGavin/helios-skills/skills/design/seamless-communication-promo-plan
+npx skills add BintzGavin/helios-skills/skills/design/cinematic-product-promo-plan
 
 # Guided video creation
 npx skills add BintzGavin/helios-skills/skills/guided/motion-design-rules
@@ -72,7 +72,7 @@ npx skills add BintzGavin/helios-skills/skills/examples/threejs
 ### Design Skills
 
 - **skills/design/animated-video-philosophy** - Working philosophy for animated video: story-first motion, pacing, shots, timing, composition, medium-specific grammar, technical commitments, and anti-patterns. Use when directing or critiquing motion and programmatic video.
-- **skills/design/seamless-communication-promo-plan** - Exemplar end-to-end plan for a 45s cinematic promo (brief → storyboard → look/motion → audio → technical deliverables → review). Use for feeling-first communication/messaging product videos.
+- **skills/design/cinematic-product-promo-plan** - Template plan for a ~45s feeling-first cinematic product promo: brief through ship, hero-element journey, look/motion/audio, deliverables matrix, accessibility. Adapt to any product category.
 
 ### Guided Video Creation Skills
 
@@ -125,7 +125,7 @@ Use these skills when:
 - Creating data visualizations as video
 - Setting up Helios development workflows
 - Applying a consistent philosophy to motion, pacing, and visual storytelling in video
-- Planning or producing cinematic, feeling-first promos for communication or connection products (see design/seamless-communication-promo-plan)
+- Planning or producing feeling-first cinematic product promos (see design/cinematic-product-promo-plan)
 
 ## Repository
 
