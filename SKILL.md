@@ -26,6 +26,9 @@ npx skills add BintzGavin/helios-skills/skills/workflows/create-composition
 npx skills add BintzGavin/helios-skills/skills/workflows/render-video
 npx skills add BintzGavin/helios-skills/skills/workflows/visualize-data
 
+# Design / motion
+npx skills add BintzGavin/helios-skills/skills/design/animated-video-philosophy
+
 # Framework examples
 npx skills add BintzGavin/helios-skills/skills/examples/react
 npx skills add BintzGavin/helios-skills/skills/examples/vue
@@ -55,6 +58,10 @@ npx skills add BintzGavin/helios-skills/skills/examples/threejs
 - **skills/workflows/create-composition** - Workflow for creating a new Helios composition.
 - **skills/workflows/render-video** - Workflow for rendering compositions to video.
 - **skills/workflows/visualize-data** - Workflow for data visualization animations.
+
+### Design Skills
+
+- **skills/design/animated-video-philosophy** - Working philosophy for animated video: story-first motion, pacing, shots, timing, composition, medium-specific grammar, technical commitments, and anti-patterns. Use when directing or critiquing motion and programmatic video.
 
 ### Framework Integration Skills
 
@@ -96,6 +103,7 @@ Use these skills when:
 - Using animation libraries like GSAP, Framer Motion, or Three.js
 - Creating data visualizations as video
 - Setting up Helios development workflows
+- Applying a consistent philosophy to motion, pacing, and visual storytelling in video
 
 ## Repository
 

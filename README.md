@@ -53,6 +53,10 @@ npm install @helios-project/skills
 - [**skills/workflows/render-video**](./skills/workflows/render-video) - Workflow for rendering compositions to video.
 - [**skills/workflows/visualize-data**](./skills/workflows/visualize-data) - Workflow for data visualization animations.
 
+### Design
+
+- [**skills/design/animated-video-philosophy**](./skills/design/animated-video-philosophy) - Working philosophy for animated video: story-first motion, shots and timing, composition, medium-specific grammar, technical commitments, and anti-patterns.
+
 ### Framework Examples
 
 - [**skills/examples/react**](./skills/examples/react) - React integration patterns
