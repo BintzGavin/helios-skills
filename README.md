@@ -56,6 +56,7 @@ npm install @helios-project/skills
 ### Design
 
 - [**skills/design/animated-video-philosophy**](./skills/design/animated-video-philosophy) - Working philosophy for animated video: story-first motion, shots and timing, composition, medium-specific grammar, technical commitments, and anti-patterns.
+- [**skills/design/seamless-communication-promo-plan**](./skills/design/seamless-communication-promo-plan) - Exemplar production plan for a 45-second cinematic messaging/connection promo: brief interrogation through storyboard, look and motion specs, audio, tooling, cuts matrix, accessibility, and ship milestones.
 
 ### Guided Video Creation
 
