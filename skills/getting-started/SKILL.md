@@ -234,7 +234,7 @@ When setting up a new Helios composition, ensure:
 
 **Renderer fails**
 - FFmpeg is bundled with the renderer package, so no manual installation needed
-- If it reports that a browser executable doesn't exist, run `npx playwright install chromium` once
+- The first render downloads the headless Chromium that the renderer's Playwright version needs, once. Running `npx playwright install` yourself may fetch a build for a different version.
 - If you need to use a custom FFmpeg path, set `ffmpegPath` in renderer options
 
 **Player not detecting composition**

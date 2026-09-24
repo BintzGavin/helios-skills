@@ -114,7 +114,7 @@ Fix the page, check again, and render again.
 |---|---|
 | "How long should the video be? Pass --duration" | Add `--duration <seconds>`. |
 | `window.renderAt(2.5) threw: …` | Your page errored at that time. The message includes your stack trace. |
-| "Executable doesn't exist … playwright install" | Run `npx playwright install chromium` once. |
+| The first render pauses to download Chromium | That's expected, and it happens once. Don't run `npx playwright install` yourself: it fetches a build for the wrong Playwright version. |
 | "The page defines no window.helios, window.renderAt(t) …" | Your script never defined `renderAt`. Check the page for a load error, such as a syntax error or a failed import. |
 | Frames differ between two renders | Something isn't a function of `t`: an unseeded `Math.random()`, a counter or a timer. |
 | Blank WebGL frames | Draw inside `renderAt` (or a rAF loop), not once at load. |
