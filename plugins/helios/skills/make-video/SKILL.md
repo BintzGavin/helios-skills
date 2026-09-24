@@ -78,6 +78,7 @@ npx -y @helios-project/cli@latest render video.html -o video.mp4 --duration 12
 | `--fps <n>` | Frame rate; the default is 30. |
 | `--audio song.mp3` | Soundtrack, trimmed to the video. |
 | `--mode canvas` | Faster for a page that is only one full-frame `<canvas>`. The default, `dom`, captures the page as it looks. |
+| `--preset medium` | For the final file. It's several times smaller at the same quality and takes longer to encode. The default, `ultrafast`, is quick for drafts. |
 
 Rendering is frame-exact. Frame *n* is exactly `renderAt(n / fps)`, with no dropped or duplicated frames and no dependence on machine speed.
 
