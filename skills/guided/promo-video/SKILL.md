@@ -179,7 +179,7 @@ STEP 9 — Render Using Official Helios CLI (DOM Mode)
 
 Render with:
 
-npx helios render ./composition.html -o output.mp4
+npx @helios-project/cli render ./composition.html -o output.mp4
 
 Requirements:
 

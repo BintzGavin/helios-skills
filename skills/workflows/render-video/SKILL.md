@@ -7,11 +7,25 @@ description: Workflow for rendering a Helios composition to a video file. Use wh
 
 Rendering is the process of capturing a composition frame-by-frame and encoding it into a video file (e.g., MP4). This is done using the `@helios-project/renderer` package in a Node.js environment.
 
+## The quick path: one command
+
+```bash
+npx -y @helios-project/cli@latest render composition.html -o output.mp4
+```
+
+- The duration, fps and size come from the composition's `window.helios`. To set them yourself, pass `--duration`, `--fps`, `--width` and `--height`.
+- A page that draws itself with `window.renderAt(t)` needs `--duration`.
+- `--audio track.mp3` adds a soundtrack.
+- A plain HTML file renders directly from disk. If a bundler has to build the composition, run `npm run dev` and pass its URL instead.
+
+Use the script below only when you need a custom pipeline, such as input props, several audio tracks, or progress callbacks.
+
 ## 1. Prerequisites
 
-Ensure your composition is running. The renderer needs a URL to access the composition.
-- Locally: `npm run dev` (e.g., `http://localhost:3000/composition.html`)
-- Remote: Any accessible URL.
+The renderer needs a URL for the composition:
+- A file on disk: `file:///path/to/composition.html`
+- A dev server: `npm run dev`, e.g. `http://localhost:3000/composition.html`
+- Any other accessible URL
 
 ## 2. Create Render Script
 
@@ -88,8 +102,7 @@ node render.js
 - Check if the URL is correct and accessible in a regular browser.
 
 ### "Black output" or "Empty video"
-- Ensure `helios.bindToDocumentTimeline()` is called in your composition.
-- Ensure `window.helios` is exposed.
+- Ensure `window.helios` is exposed (or the page defines `window.renderAt(t)`).
 - If using `mode: 'canvas'`, ensure you are drawing to a `<canvas>` element.
 - If using `mode: 'dom'`, ensure elements are visible.
 

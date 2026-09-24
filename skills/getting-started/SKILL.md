@@ -96,10 +96,10 @@ const helios = new Helios({
   autoSyncAnimations: true  // Sync CSS/WAAPI animations
 });
 
-// Bind to document timeline (CRITICAL for Renderer/Player)
+// Optional: follow the page clock, so opening the file in a browser plays it.
 helios.bindToDocumentTimeline();
 
-// Expose to window (CRITICAL for detection)
+// Required: the renderer and the player find and drive the composition through window.helios.
 window.helios = helios;
 
 // Subscribe to frame updates
@@ -147,21 +147,17 @@ When you call `helios.seek(45)`, all CSS/WAAPI animations instantly update to fr
 Use the CLI to render your composition:
 
 ```bash
-npx helios render ./composition.html -o output.mp4
+npx @helios-project/cli render ./composition.html -o output.mp4
 ```
 
 Or use the Renderer package programmatically:
 
 ```typescript
-import { render } from '@helios-project/renderer';
+import { Renderer } from '@helios-project/renderer';
+import { pathToFileURL } from 'node:url';
 
-await render({
-  input: './composition.html',
-  output: './output.mp4',
-  width: 1920,
-  height: 1080,
-  fps: 30
-});
+const renderer = new Renderer({ width: 1920, height: 1080, fps: 30, durationInSeconds: 10, mode: 'dom' });
+await renderer.render(pathToFileURL('./composition.html').href, './output.mp4');
 ```
 
 ### 5. Preview with the Player (Optional)
@@ -215,7 +211,6 @@ When setting up a new Helios composition, ensure:
 - [ ] **Core package installed**: `npm install @helios-project/core`
 - [ ] **Renderer package installed** (for MP4 output): `npm install @helios-project/renderer`
 - [ ] **Helios instance created**: `new Helios({ duration, fps })`
-- [ ] **Timeline bound**: `helios.bindToDocumentTimeline()` called
 - [ ] **Window exposed**: `window.helios = helios` set
 - [ ] **State subscribed**: `helios.subscribe(...)` used to trigger renders
 - [ ] **Canvas/DOM ready**: Elements are sized correctly
@@ -239,7 +234,7 @@ When setting up a new Helios composition, ensure:
 
 **Renderer fails**
 - FFmpeg is bundled with the renderer package, so no manual installation needed
-- Check that Chrome/Chromium is available (Playwright should install it automatically)
+- If it reports that a browser executable doesn't exist, run `npx playwright install chromium` once
 - If you need to use a custom FFmpeg path, set `ffmpegPath` in renderer options
 
 **Player not detecting composition**
