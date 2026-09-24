@@ -94,6 +94,12 @@ npx -y @helios-project/cli@latest sheet video.html --strip 2:3 --fps 30      # e
 npx -y @helios-project/cli@latest sheet video.html --at 4 --crop 600,300,720,480  # zoom into a region
 ```
 
+Before a long render, check that the page really is a function of `t`:
+
+```bash
+npx -y @helios-project/cli@latest verify video.html --duration 12   # exits 1 and names the frames that depend on history
+```
+
 Open the PNGs with your image-viewing tool and check:
 - text is legible and inside the frame
 - transitions actually happen
@@ -116,7 +122,7 @@ Fix the page, check again, and render again.
 | `window.renderAt(2.5) threw: …` | Your page errored at that time. The message includes your stack trace. |
 | The first render pauses to download Chromium | That's expected, and it happens once. Don't run `npx playwright install` yourself: it fetches a build for the wrong Playwright version. |
 | "The page defines no window.helios, window.renderAt(t) …" | Your script never defined `renderAt`. Check the page for a load error, such as a syntax error or a failed import. |
-| Frames differ between two renders | Something isn't a function of `t`: an unseeded `Math.random()`, a counter or a timer. |
+| Frames differ between two renders, or `verify` fails | Something isn't a function of `t`: an unseeded `Math.random()`, a counter or a timer. |
 | Blank WebGL frames | Draw inside `renderAt` (or a rAF loop), not once at load. |
 
 Bigger projects (React/Vue components, studio editing, distributed cloud rendering) use the Helios packages directly: <https://github.com/BintzGavin/helios>.
