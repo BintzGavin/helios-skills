@@ -2,6 +2,25 @@
 
 Agent skills for [Helios](https://github.com/BintzGavin/helios), a browser-native video engine for programmatic animation and rendering.
 
+## Make a video
+
+Ask your agent for a video, MP4, GIF, animation, music video, short film, explainer, chart animation or social clip. The **make-video** skill has it write one HTML page that draws any frame from its time `t`, then render the page frame-exact to MP4 with Helios, check stills and contact sheets, and add a soundtrack.
+
+### Claude Code plugin
+
+```
+/plugin marketplace add BintzGavin/helios-skills
+/plugin install helios@helios
+```
+
+The plugin installs only the **make-video** skill. The rest of this repository is reference material, which it links to.
+
+### Just the skill, via skills.sh
+
+```bash
+npx skills add BintzGavin/helios-skills/plugins/helios/skills/make-video
+```
+
 ## Installation
 
 ### Via skills.sh
@@ -25,13 +44,11 @@ npx skills add BintzGavin/helios-skills/skills/player
 npx skills add BintzGavin/helios-skills/skills/studio
 ```
 
-### Via npm
-
-```bash
-npm install @helios-project/skills
-```
-
 ## Available Skills
+
+### Make a Video
+
+- [**plugins/helios/skills/make-video**](./plugins/helios/skills/make-video) - The entry point. One HTML page with `window.renderAt(t)`, rendered to MP4 with `npx @helios-project/cli render`. Also covers stills and contact sheets for review, soundtracks, and music sync.
 
 ### Getting Started
 
