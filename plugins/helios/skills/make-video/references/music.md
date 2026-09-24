@@ -32,15 +32,7 @@ const FPS = 30;
 let env = [];
 
 async function loudness(url) {
-  // XHR rather than fetch(): it can read files next to the page when Helios renders from disk.
-  const bytes = await new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
-    xhr.responseType = 'arraybuffer';
-    xhr.onload = () => resolve(xhr.response);
-    xhr.onerror = () => reject(new Error('could not read ' + url));
-    xhr.send();
-  });
+  const bytes = await (await fetch(url)).arrayBuffer();   // Helios serves the page's folder, so fetch() works
   const audio = await new OfflineAudioContext(1, 1, 44100).decodeAudioData(bytes);
   const samples = audio.getChannelData(0);
   const hop = Math.floor(audio.sampleRate / FPS);
@@ -66,7 +58,7 @@ window.renderAt = async (t) => {
 };
 ```
 
-This analysis works when Helios renders the page. A normal browser won't let a page opened from disk read other files, so to preview there, serve the folder first, for example with `npx serve`.
+Helios serves the page's folder over http while it renders, so `fetch()` can read files next to the page. To preview in a normal browser, serve the folder too, for example with `npx serve`: a page opened straight from disk can't fetch other files.
 
 ## Checking sync
 

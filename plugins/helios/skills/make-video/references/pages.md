@@ -55,7 +55,7 @@ const ready = Promise.all([img.decode(), document.fonts.load('800 120px Inter'),
 window.renderAt = async (t) => { await ready; /* ... */ };
 ```
 
-Put files next to the page and use relative paths.
+Put files next to the page and use relative paths. Helios serves the page's folder while it renders, so `fetch('data.csv')` works too.
 
 ## Vertical, square and other sizes
 
