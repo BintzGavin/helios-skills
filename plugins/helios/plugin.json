@@ -26,6 +26,7 @@
         "developerName": "Gavin Bintz",
         "category": "Creativity",
         "capabilities": [
+          "Interactive",
           "Read",
           "Write"
         ],
