@@ -9,15 +9,26 @@
   "homepage": "https://github.com/BintzGavin/helios",
   "repository": "https://github.com/BintzGavin/helios-skills",
   "license": "Apache-2.0",
-  "keywords": ["video", "mp4", "animation", "rendering", "helios"],
+  "keywords": [
+    "video",
+    "mp4",
+    "animation",
+    "rendering",
+    "helios"
+  ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Helios",
     "shortDescription": "Make videos from code, rendered frame-exact to MP4",
     "longDescription": "Your agent writes one HTML page that draws each frame from its time, and Helios renders it frame-exact to MP4. Along the way it checks stills and contact sheets, then adds a soundtrack.",
     "developerName": "Gavin Bintz",
     "category": "Creativity",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://github.com/BintzGavin/helios",
     "defaultPrompt": [
       "Make a 15-second launch video for this project",
