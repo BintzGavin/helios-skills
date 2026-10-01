@@ -12,7 +12,7 @@ The Helios Studio is a Vite-based development server and preview environment. It
 Run the studio from your project root:
 
 ```bash
-npx helios studio
+npx @helios-project/cli studio
 ```
 
 This will start a local server (typically at `http://localhost:5173`) where you can view and debug your composition.
@@ -79,7 +79,7 @@ The Props Editor generates a UI based on your `HeliosSchema`.
 
 - `HELIOS_PROJECT_ROOT`: Override the root directory scanning path.
   ```bash
-  HELIOS_PROJECT_ROOT=./my-project npx helios studio
+  HELIOS_PROJECT_ROOT=./my-project npx @helios-project/cli studio
   ```
 
 ## Common Issues

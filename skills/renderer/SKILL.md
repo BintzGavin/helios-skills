@@ -188,7 +188,7 @@ Burn subtitles (e.g. from the player) into the video output. Requires `videoCode
 const renderer = new Renderer({
   // ...
   videoCodec: 'libx264',
-  subtitles: true
+  subtitles: './captions.srt' // path to an SRT file
 });
 ```
 

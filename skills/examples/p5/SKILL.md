@@ -14,6 +14,7 @@ import { Helios } from '@helios-project/core';
 import p5 from 'p5';
 
 const helios = new Helios({ duration: 10, fps: 60 });
+window.helios = helios; // lets the renderer and player drive it
 
 const sketch = (p: p5) => {
   p.setup = () => {
@@ -35,14 +36,10 @@ const sketch = (p: p5) => {
   };
 };
 
-new p5(sketch, document.getElementById('canvas-container'));
+const instance = new p5(sketch, document.getElementById('canvas-container'));
 
-// Drive P5 from Helios
-helios.subscribe(() => {
-  // Manually trigger P5 redraw
-  // Note: If you have a reference to the p5 instance, call instance.redraw()
-  // Or simply put drawing logic here directly.
-});
+// Drive P5 from Helios: redraw on every frame change.
+helios.subscribe(() => instance.redraw());
 ```
 
 ## Key Patterns
@@ -63,5 +60,3 @@ helios.subscribe(() => {
 });
 ```
 
-## Source
-- Example: `examples/p5-canvas-animation/`
