@@ -17,6 +17,7 @@
     "helios"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Helios",
     "shortDescription": "Make videos from code, rendered frame-exact to MP4",
@@ -24,6 +25,7 @@
     "developerName": "Gavin Bintz",
     "category": "Creativity",
     "capabilities": [
+      "Interactive",
       "Read",
       "Write"
     ],
