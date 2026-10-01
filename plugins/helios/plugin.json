@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "helios",
+  "version": "0.1.0",
+  "description": "Make videos from code: one HTML page that draws any frame from its time t, rendered frame-exact to MP4 by Helios.",
+  "author": {
+    "name": "Gavin Bintz",
+    "url": "https://github.com/BintzGavin"
+  },
+  "homepage": "https://github.com/BintzGavin/helios",
+  "repository": "https://github.com/BintzGavin/helios-skills",
+  "license": "Apache-2.0",
+  "keywords": ["video", "mp4", "animation", "rendering", "helios"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Helios",
+        "shortDescription": "Make videos from code, rendered frame-exact to MP4",
+        "longDescription": "Your agent writes one HTML page that draws each frame from its time, and Helios renders it frame-exact to MP4. Along the way it checks stills and contact sheets, then adds a soundtrack.",
+        "developerName": "Gavin Bintz",
+        "category": "Creativity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://github.com/BintzGavin/helios",
+        "defaultPrompt": [
+          "Make a 15-second launch video for this project",
+          "Turn this CSV into an animated chart video",
+          "Make a 9:16 social clip that cuts to song.mp3"
+        ],
+        "brandColor": "#3770FF"
+      },
+      "onboardingSkill": "./skills/make-video/SKILL.md"
+    }
+  }
+}

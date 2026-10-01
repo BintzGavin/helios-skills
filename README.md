@@ -13,7 +13,16 @@ Ask your agent for a video, MP4, GIF, animation, music video, short film, explai
 /plugin install helios@helios
 ```
 
-The plugin installs only the **make-video** skill. The rest of this repository is reference material, which it links to.
+### Codex plugin
+
+```bash
+codex plugin marketplace add BintzGavin/helios-skills
+codex plugin add helios@helios
+```
+
+Other Agent Plugins 1.0 clients install it from [`plugins/helios`](./plugins/helios).
+
+Either way, the plugin installs only the **make-video** skill. The rest of this repository is reference material, which it links to.
 
 ### Just the skill, via skills.sh
 
