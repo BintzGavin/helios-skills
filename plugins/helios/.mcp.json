@@ -2,7 +2,7 @@
   "mcpServers": {
     "helios": {
       "command": "npx",
-      "args": ["-y", "@helios-project/cli@latest", "mcp"]
+      "args": ["-y", "@helios-project/cli@0.46.0", "mcp"]
     }
   }
 }
