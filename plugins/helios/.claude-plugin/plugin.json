@@ -9,5 +9,15 @@
   "homepage": "https://github.com/BintzGavin/helios",
   "repository": "https://github.com/BintzGavin/helios-skills",
   "license": "Apache-2.0",
-  "keywords": ["video", "mp4", "animation", "rendering", "helios"]
+  "keywords": [
+    "video",
+    "mp4",
+    "animation",
+    "rendering",
+    "helios"
+  ],
+  "documentationUrl": "https://github.com/BintzGavin/helios/blob/main/docs/site/guides/ai-assistants.md",
+  "supportUrl": "https://github.com/BintzGavin/helios/issues",
+  "privacyPolicyUrl": "https://github.com/BintzGavin/helios/blob/main/docs/legal/privacy.md",
+  "termsOfServiceUrl": "https://github.com/BintzGavin/helios/blob/main/docs/legal/terms.md"
 }
