@@ -5,6 +5,8 @@ description: Collection of agent skills for Helios video engine. Use when workin
 
 # Helios Skills Collection
 
+> **Deprecated.** These skills and the Helios plugin now live in [BintzGavin/helios](https://github.com/BintzGavin/helios) (`skills/` and `plugins/helios/`). Install with `npx skills add BintzGavin/helios`. This repository gets no further updates.
+
 This repository contains agent skills for [Helios](https://github.com/BintzGavin/helios), a browser-native video engine for programmatic animation and rendering.
 
 ## Installation

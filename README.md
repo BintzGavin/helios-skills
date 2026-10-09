@@ -1,130 +1,58 @@
-# Helios Skills
+# Helios Skills (deprecated)
 
-Agent skills for [Helios](https://github.com/BintzGavin/helios), a browser-native video engine for programmatic animation and rendering.
+> **This repository is deprecated.** The Helios skills and the Helios agent plugin now live in the main Helios repository, [BintzGavin/helios](https://github.com/BintzGavin/helios). This repository gets no further updates. Install from the main repository instead.
 
-## Make a video
+| What | Old location (here) | New location |
+| --- | --- | --- |
+| Agent plugin (`make-video` skill, MCP server, manifests, assets) | `plugins/helios/` | [`plugins/helios/`](https://github.com/BintzGavin/helios/tree/main/plugins/helios) |
+| Skill catalog | `skills/` | [`skills/`](https://github.com/BintzGavin/helios/tree/main/skills) |
+| Claude Code marketplace | `.claude-plugin/marketplace.json` | [`.claude-plugin/marketplace.json`](https://github.com/BintzGavin/helios/blob/main/.claude-plugin/marketplace.json) |
+| Codex marketplace | `.agents/plugins/marketplace.json` | [`.agents/plugins/marketplace.json`](https://github.com/BintzGavin/helios/blob/main/.agents/plugins/marketplace.json) |
 
-Ask your agent for a video, MP4, GIF, animation, music video, short film, explainer, chart animation or social clip. The **make-video** skill has it write one HTML page that draws any frame from its time `t`, then render the page frame-exact to MP4 with Helios, check stills and contact sheets, and add a soundtrack.
+## Install from BintzGavin/helios
+
+### Skills, via skills.sh
+
+```bash
+npx skills add BintzGavin/helios
+```
+
+The [skills CLI](https://skills.sh) lists `make-video` and the rest of the catalog so you can pick the ones you want. To install one skill by path:
+
+```bash
+npx skills add BintzGavin/helios/plugins/helios/skills/make-video
+npx skills add BintzGavin/helios/skills/getting-started
+npx skills add BintzGavin/helios/skills/guided/promo-video
+```
+
+Every path that used to start with `BintzGavin/helios-skills/` now starts with `BintzGavin/helios/`.
 
 ### Claude Code plugin
 
-```
-/plugin marketplace add BintzGavin/helios-skills
+```text
+/plugin marketplace add BintzGavin/helios
 /plugin install helios@helios
+```
+
+If you added the old marketplace, remove it first, since both marketplaces are named `helios`:
+
+```text
+/plugin marketplace remove helios
 ```
 
 ### Codex plugin
 
 ```bash
-codex plugin marketplace add BintzGavin/helios-skills
+codex plugin marketplace add BintzGavin/helios
 codex plugin add helios@helios
 ```
 
-Other Agent Plugins 1.0 clients install it from [`plugins/helios`](./plugins/helios).
+If you added the old marketplace, remove it first: both marketplaces are named `helios`.
 
-Either way, the plugin installs only the **make-video** skill. The rest of this repository is reference material, which it links to.
+## Already installed?
 
-### Just the skill, via skills.sh
-
-```bash
-npx skills add BintzGavin/helios-skills/plugins/helios/skills/make-video
-```
-
-## Installation
-
-### Via skills.sh
-
-Install using the [skills CLI](https://skills.sh):
-
-```bash
-npx skills add BintzGavin/helios-skills
-```
-
-Or install individual skills by path:
-
-```bash
-# Start here for new projects
-npx skills add BintzGavin/helios-skills/skills/getting-started
-
-# Core packages
-npx skills add BintzGavin/helios-skills/skills/core
-npx skills add BintzGavin/helios-skills/skills/renderer
-npx skills add BintzGavin/helios-skills/skills/player
-npx skills add BintzGavin/helios-skills/skills/studio
-```
-
-## Available Skills
-
-### Make a Video
-
-- [**plugins/helios/skills/make-video**](./plugins/helios/skills/make-video) - The entry point. One HTML page with `window.renderAt(t)`, rendered to MP4 with `npx @helios-project/cli render`. Also covers stills and contact sheets for review, soundtracks, and music sync.
-
-### Getting Started
-
-- [**skills/getting-started**](./skills/getting-started) - Installation and quick start guide. Covers package installation, requirements (Node.js, FFmpeg), basic setup, and initial composition structure.
-
-### Core
-
-- [**skills/core**](./skills/core) - Core API for Helios video engine. Covers Helios class instantiation, signals, animation helpers, and DOM synchronization.
-
-### Packages
-
-- [**skills/renderer**](./skills/renderer) - Server-side rendering of Helios compositions to video files.
-- [**skills/player**](./skills/player) - Embeddable video player with composition playback and controls.
-- [**skills/studio**](./skills/studio) - Visual editor for Helios compositions.
-
-### Workflows
-
-- [**skills/workflows/create-composition**](./skills/workflows/create-composition) - Workflow for creating a new Helios composition.
-- [**skills/workflows/render-video**](./skills/workflows/render-video) - Workflow for rendering compositions to video.
-- [**skills/workflows/visualize-data**](./skills/workflows/visualize-data) - Workflow for data visualization animations.
-
-### Design
-
-- [**skills/design/animated-video-philosophy**](./skills/design/animated-video-philosophy) - Working philosophy for animated video: story-first motion, shots and timing, composition, medium-specific grammar, technical commitments, and anti-patterns.
-- [**skills/design/cinematic-product-promo-plan**](./skills/design/cinematic-product-promo-plan) - Template production plan for ~45s feeling-first product promos (any category): brief through storyboard, visual/motion/audio specs, tooling, reframed cuts, accessibility, ship milestones.
-
-### Guided Video Creation
-
-End-to-end guided workflows for creating specific video types. Each skill extracts brand identity from your repo, generates beat-synced music, and produces a rendered video.
-
-- [**skills/guided/motion-design-rules**](./skills/guided/motion-design-rules) - Motion design framework: anti-slideshow architecture, visual layering, physics-based easing, choreography, and quality validation.
-- [**skills/guided/promo-video**](./skills/guided/promo-video) - Promotional / hype video. High energy, beat-synced, CTA-driven.
-- [**skills/guided/explainer-video**](./skills/guided/explainer-video) - Explainer / walkthrough video. Narrative arc, section headers, measured pacing.
-- [**skills/guided/product-demo**](./skills/guided/product-demo) - Product demo / showcase. Feature callouts, UI zoom-ins, progressive reveals.
-- [**skills/guided/testimonial-video**](./skills/guided/testimonial-video) - Social proof / testimonial video. Quote typography, customer branding, trust signals.
-- [**skills/guided/launch-announcement**](./skills/guided/launch-announcement) - Product launch / release announcement. Countdown motifs, dramatic reveal.
-- [**skills/guided/social-clip**](./skills/guided/social-clip) - Short-form social clip (Reels/TikTok/Shorts). Vertical 9:16, punchy, loop-friendly.
-
-### Framework Examples
-
-- [**skills/examples/react**](./skills/examples/react) - React integration patterns
-- [**skills/examples/vue**](./skills/examples/vue) - Vue integration patterns
-- [**skills/examples/svelte**](./skills/examples/svelte) - Svelte integration patterns
-- [**skills/examples/solid**](./skills/examples/solid) - Solid.js integration patterns
-- [**skills/examples/vanilla**](./skills/examples/vanilla) - Vanilla JavaScript patterns
-
-### Animation Libraries
-
-- [**skills/examples/gsap**](./skills/examples/gsap) - GSAP animation integration
-- [**skills/examples/framer-motion**](./skills/examples/framer-motion) - Framer Motion integration
-- [**skills/examples/lottie**](./skills/examples/lottie) - Lottie animation playback
-- [**skills/examples/threejs**](./skills/examples/threejs) - Three.js 3D scenes
-- [**skills/examples/pixi**](./skills/examples/pixi) - PixiJS 2D graphics
-- [**skills/examples/p5**](./skills/examples/p5) - p5.js creative coding
-
-### Data Visualization
-
-- [**skills/examples/d3**](./skills/examples/d3) - D3.js visualizations
-- [**skills/examples/chartjs**](./skills/examples/chartjs) - Chart.js animated charts
-
-### Rendering Techniques
-
-- [**skills/examples/canvas**](./skills/examples/canvas) - Canvas 2D rendering
-- [**skills/examples/signals**](./skills/examples/signals) - Reactive signals patterns
-- [**skills/examples/tailwind**](./skills/examples/tailwind) - Tailwind CSS styling
-- [**skills/examples/podcast-visualizer**](./skills/examples/podcast-visualizer) - Audio visualization
+Skills you installed from this repository keep working, but they won't get updates. Re-run the install commands above to switch to the maintained copies. To update skills installed with the skills CLI, add them again from `BintzGavin/helios`.
 
 ## License
 
-Apache 2.0 - See [LICENSE](LICENSE) for details.
+The skills and the plugin remain licensed under the [Apache License 2.0](https://github.com/BintzGavin/helios/blob/main/skills/LICENSE) in their new home. The rest of the Helios repository, including the engine, is licensed under the Elastic License 2.0 unless a file or folder says otherwise.
