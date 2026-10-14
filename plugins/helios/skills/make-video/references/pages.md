@@ -62,7 +62,7 @@ Put files next to the page and use relative paths. Helios serves the page's fold
 Make the canvas (or `body`) exactly the video size, and pass the same size to the CLI:
 
 ```bash
-npx -y @helios-project/cli@latest render clip.html -o clip.mp4 --duration 10 --width 1080 --height 1920
+npx -y @helios-project/cli@0.46.0 render clip.html -o clip.mp4 --duration 10 --width 1080 --height 1920
 ```
 
 ## Seamless loops

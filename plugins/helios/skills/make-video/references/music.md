@@ -3,7 +3,7 @@
 ## Adding the soundtrack
 
 ```bash
-npx -y @helios-project/cli@latest render video.html -o video.mp4 --duration 15 --audio track.mp3
+npx -y @helios-project/cli@0.46.0 render video.html -o video.mp4 --duration 15 --audio track.mp3
 ```
 
 The audio starts at 0 and is trimmed to the video's length.
@@ -58,12 +58,12 @@ window.renderAt = async (t) => {
 };
 ```
 
-Helios serves the page's folder over http while it renders, so `fetch()` can read files next to the page. To preview in a normal browser, serve the folder too, for example with `npx serve`: a page opened straight from disk can't fetch other files.
+Helios serves the page's folder over http while it renders, so `fetch()` can read files next to the page. To preview in a normal browser, serve the folder too, for example with `python3 -m http.server`: a page opened straight from disk can't fetch other files.
 
 ## Checking sync
 
 Render a sheet around a moment you know is loud (a drop or a big kick) to confirm that the visuals react on the right frame:
 
 ```bash
-npx -y @helios-project/cli@latest sheet video.html --strip 7.5:8.5 --fps 30 --cols 8 --cell-width 240
+npx -y @helios-project/cli@0.46.0 sheet video.html --strip 7.5:8.5 --fps 30 --cols 8 --cell-width 240
 ```

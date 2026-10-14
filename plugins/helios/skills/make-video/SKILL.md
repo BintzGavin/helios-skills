@@ -68,7 +68,7 @@ DOM, CSS, SVG and WebGL pages work too. Set styles from `t` inside `renderAt`, o
 ## 2. Render it
 
 ```bash
-npx -y @helios-project/cli@latest render video.html -o video.mp4 --duration 12
+npx -y @helios-project/cli@0.46.0 render video.html -o video.mp4 --duration 12
 ```
 
 | Flag | Use |
@@ -89,16 +89,16 @@ For a GIF, render the MP4 and then convert it. See [references/pages.md](referen
 Don't hand over a video you haven't looked at. Render stills and contact sheets from the page itself; they're fast and need no encode:
 
 ```bash
-npx -y @helios-project/cli@latest still video.html --at 0.5,3,7.25            # full-size PNGs
-npx -y @helios-project/cli@latest sheet video.html --every 1 --duration 12   # one labelled grid
-npx -y @helios-project/cli@latest sheet video.html --strip 2:3 --fps 30      # every frame in 2–3s
-npx -y @helios-project/cli@latest sheet video.html --at 4 --crop 600,300,720,480  # zoom into a region
+npx -y @helios-project/cli@0.46.0 still video.html --at 0.5,3,7.25            # full-size PNGs
+npx -y @helios-project/cli@0.46.0 sheet video.html --every 1 --duration 12   # one labelled grid
+npx -y @helios-project/cli@0.46.0 sheet video.html --strip 2:3 --fps 30      # every frame in 2–3s
+npx -y @helios-project/cli@0.46.0 sheet video.html --at 4 --crop 600,300,720,480  # zoom into a region
 ```
 
 Before a long render, check that the page really is a function of `t`:
 
 ```bash
-npx -y @helios-project/cli@latest verify video.html --duration 12   # exits 1 and names the frames that depend on history
+npx -y @helios-project/cli@0.46.0 verify video.html --duration 12   # exits 1 and names the frames that depend on history
 ```
 
 Open the PNGs with your image-viewing tool and check:
@@ -121,7 +121,7 @@ Fix the page, check again, and render again.
 |---|---|
 | "How long should the video be? Pass --duration" | Add `--duration <seconds>`. |
 | `window.renderAt(2.5) threw: …` | Your page errored at that time. The message includes your stack trace. |
-| The first render pauses to download Chromium | That's expected, and it happens once. Don't run `npx playwright install` yourself: it fetches a build for the wrong Playwright version. |
+| The first render pauses to download Chromium | That's expected, and it happens once. Don't install Playwright's browsers yourself: that fetches a build for the wrong Playwright version. |
 | "The page defines no window.helios, window.renderAt(t) …" | Your script never defined `renderAt`. Check the page for a load error, such as a syntax error or a failed import. |
 | Frames differ between two renders, or `verify` fails | Something isn't a function of `t`: an unseeded `Math.random()`, a counter or a timer. |
 | Blank WebGL frames | Draw inside `renderAt` (or a rAF loop), not once at load. |
